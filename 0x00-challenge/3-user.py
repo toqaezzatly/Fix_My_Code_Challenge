@@ -16,7 +16,7 @@ class User():
     def __init__(self):
         """
         Initialize a new user:
-        - assigned an unique `id`
+        - assigned a unique `id`
         """
         self.id = str(uuid.uuid4())
         self.__password = None
@@ -92,5 +92,9 @@ if __name__ == '__main__':
     if user_1.is_valid_password(None):
         print("is_valid_password should return False if compare with None")
 
-    if user
+    if user_1.is_valid_password(89):
+        print("is_valid_password should return False if compare with integer")
+
+    if user_2.is_valid_password("No pwd"):
+        print("is_valid_password should return False if no password set before")
 
